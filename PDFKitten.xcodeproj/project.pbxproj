@@ -74,7 +74,7 @@
 		2C209A9115C2B36900D4437B /* CIDFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CIDFont.m; path = PDFKitten/CIDFont.m; sourceTree = SOURCE_ROOT; };
 		2C265924154D9C0E00E11745 /* RenderingStateStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RenderingStateStack.h; path = PDFKitten/RenderingStateStack.h; sourceTree = SOURCE_ROOT; };
 		2C265926154D9C3900E11745 /* RenderingStateStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RenderingStateStack.m; path = PDFKitten/RenderingStateStack.m; sourceTree = SOURCE_ROOT; };
-		2C35AD6E167E02E000BA5F79 /* PDFKittenTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PDFKittenTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C35AD6E167E02E000BA5F79 /* PDFKittenTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PDFKittenTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C35AD74167E02E000BA5F79 /* PDFKittenTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PDFKittenTests-Info.plist"; sourceTree = "<group>"; };
 		2C35AD76167E02E000BA5F79 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2C35AD7B167E02E000BA5F79 /* PDFKittenTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PDFKittenTests-Prefix.pch"; sourceTree = "<group>"; };
@@ -183,7 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				2CE7BC491389674B009784B9 /* PDFKitten.app */,
-				2C35AD6E167E02E000BA5F79 /* PDFKittenTests.octest */,
+				2C35AD6E167E02E000BA5F79 /* PDFKittenTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -434,7 +434,7 @@
 			);
 			name = PDFKittenTests;
 			productName = PDFKittenTests;
-			productReference = 2C35AD6E167E02E000BA5F79 /* PDFKittenTests.octest */;
+			productReference = 2C35AD6E167E02E000BA5F79 /* PDFKittenTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -444,7 +444,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastTestingUpgradeCheck = 0610;
-				LastUpgradeCheck = 0610;
+				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "Chalmers Göteborg";
 			};
 			buildConfigurationList = 2C0E15A113589B0B004096C7 /* Build configuration list for PBXProject "PDFKitten" */;
@@ -591,6 +591,7 @@
 		2C0E15DC13589B0C004096C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
@@ -639,6 +640,7 @@
 				GENERATE_PKGINFO_FILE = NO;
 				INFOPLIST_FILE = "PDFKitten/PDFKitten-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.KurtCode.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = PDFKitten;
 				WRAPPER_EXTENSION = app;
 			};
@@ -663,6 +665,7 @@
 				GENERATE_PKGINFO_FILE = NO;
 				INFOPLIST_FILE = "PDFKitten/PDFKitten-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.KurtCode.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = PDFKitten;
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
@@ -695,6 +698,7 @@
 				INFOPLIST_FILE = "PDFKittenTests/PDFKittenTests-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kurtcode.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 			};
@@ -720,6 +724,7 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "PDFKittenTests/PDFKittenTests-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kurtcode.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				VALIDATE_PRODUCT = YES;

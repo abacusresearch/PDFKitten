@@ -287,12 +287,12 @@ typedef const unsigned char CharacterCode;
 	NSMutableString *string = [NSMutableString string];
 	[string appendFormat:@"%@ {\n", self.baseFont];
 	[string appendFormat:@"\ttype = %@\n", [self classForKeyedArchiver]];
-	[string appendFormat:@"\tcharacter widths = %d\n", [self.widths count]];
+	[string appendFormat:@"\tcharacter widths = %lu\n", (unsigned long)[self.widths count]];
 	[string appendFormat:@"\ttoUnicode = %d\n", (self.toUnicode != nil)];
 	
     if (self.descendantFonts)
     {
-		[string appendFormat:@"\tdescendant fonts = %d\n", [self.descendantFonts count]];
+		[string appendFormat:@"\tdescendant fonts = %lu\n", (unsigned long)[self.descendantFonts count]];
 	}
     
 	[string appendFormat:@"}\n"];

@@ -56,8 +56,8 @@
 	self.contentSize = CGSizeMake(CGRectGetWidth(self.bounds) * numberOfPages, CGRectGetWidth(self.bounds));
 	
 	CGRect visibleBounds = self.bounds;
-	int firstNeededPageIndex = floorf(CGRectGetMinX(visibleBounds) / CGRectGetWidth(visibleBounds));
-	int lastNeededPageIndex  = floorf((CGRectGetMaxX(visibleBounds)-1) / CGRectGetWidth(visibleBounds));
+	NSInteger firstNeededPageIndex = floorf(CGRectGetMinX(visibleBounds) / CGRectGetWidth(visibleBounds));
+	NSInteger lastNeededPageIndex  = floorf((CGRectGetMaxX(visibleBounds)-1) / CGRectGetWidth(visibleBounds));
 	firstNeededPageIndex = MAX(firstNeededPageIndex, 0);
 	lastNeededPageIndex = MIN(numberOfPages-1, lastNeededPageIndex);
 	
@@ -71,7 +71,7 @@
 	}
 	[visiblePages minusSet:recycledPages];
 	
-	for (int i = firstNeededPageIndex; i <= lastNeededPageIndex; i++)
+	for (NSInteger i = firstNeededPageIndex; i <= lastNeededPageIndex; i++)
 	{
         if ([self isShowingPageForIndex:i]) continue;
 		
