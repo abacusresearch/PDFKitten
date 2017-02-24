@@ -23,15 +23,14 @@ TODO: Add long description of the pod here.
 
   s.homepage         = 'https://github.com/gorillatech/PDFKitten'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
-  s.license          = { :type => 'MIT', :file => 'LICENSE' }
+  s.license          = { :type => 'MIT', :file => 'License.txt' }
   s.author           = { 'gorillatech' => 'guglielmo@gorillatech.io' }
   s.source           = { :git => 'https://github.com/gorillatech/PDFKitten.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'PDFKitten/**/*'
-
+  s.source_files = 'PDFKitten/**/*.{m,h,mm}'
   s.requires_arc = false
 
 
