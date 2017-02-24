@@ -33,7 +33,7 @@ TODO: Add long description of the pod here.
   s.source_files = 'PDFKitten/**/*.{m,h,mm}'
   s.resources =    'PDFKitten/**/*.{xib,lproj}'
   s.prefix_header_file = 'PDFKitten/PDFKitten-Prefix.pch'
-  s.requires_arc = false
+  s.requires_arc = true
 
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
