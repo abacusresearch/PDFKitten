@@ -34,8 +34,8 @@
     {
 		unichar inputCharacter = [inputString characterAtIndex:position];
 		unichar actualCharacter = [lowercaseString characterAtIndex:position++];
-        unichar expectedCharacter = [keyword characterAtIndex:keywordPosition];
 
+		unichar expectedCharacter = [keyword length] == 0 ? 0 : [keyword characterAtIndex:keywordPosition];
         if (actualCharacter != expectedCharacter)
         {
             if (keywordPosition > 0)
