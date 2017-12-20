@@ -32,6 +32,13 @@ TODO: Add long description of the pod here.
 
   s.source_files = 'PDFKitten/**/*.{m,h,mm}'
   s.resources =    'PDFKitten/**/*.{xib,lproj}'
+  s.exclude_files  =  [
+     'PDFKitten/PDFPage.*',
+     'PDFKitten/PageView.*',
+     'PDFKitten/PageViewController.*',
+     'PDFKitten/RootViewController.*',
+     'PDFKitten/PDFKittenAppDelegate.*'
+  ]
   s.prefix_header_file = 'PDFKitten/PDFKitten-Prefix.pch'
   s.requires_arc = true
 
