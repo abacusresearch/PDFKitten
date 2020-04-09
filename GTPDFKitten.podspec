@@ -31,7 +31,7 @@ TODO: Add long description of the pod here.
   s.ios.deployment_target = '8.0'
 
   s.source_files = 'PDFKitten/**/*.{m,h,mm}'
-  s.resources =    'PDFKitten/**/*.{xib,lproj}'
+  s.resources =    'PDFKitten/**/*.{xib,lproj,afm}'
   s.exclude_files  =  [
      'PDFKitten/PDFPage.*',
      'PDFKitten/PageView.*',
